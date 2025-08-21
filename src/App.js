@@ -10,11 +10,11 @@ import Game from "./panels/Game";
 import Settings from "./panels/Settings";
 import {numberOfBombs} from "./static/texts/boardData";
 import {getCurrentUserData} from "./helpers/commonHelpers";
-import Leaderboard from "./panels/Leaderboard";
+// import Leaderboard from "./panels/Leaderboard";
 import {BanPage} from "./components/BanPage";
 import {setStatusBarColor} from "./helpers/vkBridgeHelpers";
-import {showOnBoardingIfItDidNotShow} from "./helpers/commonHelpers/showOnBoardingIfItDidNotShow";
-import {checkPost} from "./reducers/checkPost";
+// import {showOnBoardingIfItDidNotShow} from "./helpers/commonHelpers/showOnBoardingIfItDidNotShow";
+// import {checkPost} from "./reducers/checkPost";
 
 
 const App = () => {
@@ -49,11 +49,11 @@ const App = () => {
 								<Home id="home" go={go} currentUser={currentUser}/>
 								<About id="about" go={go} />
 								<Rules id="rules" go={go} />
-								<Leaderboard
-									currentUser={currentUser}
-									id="leaderboard"
-									go={go}
-								/>
+								{/*<Leaderboard*/}
+								{/*	currentUser={currentUser}*/}
+								{/*	id="leaderboard"*/}
+								{/*	go={go}*/}
+								{/*/>*/}
 								{/*<Placeholder id="leaderboard" go={go}/>*/}
 								<Game
 									userId={currentUser && currentUser.id}

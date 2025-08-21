@@ -61,28 +61,28 @@ const Game = ({ id, go, deviceWidth, size, numberOfBombs, showPopup, device, use
             return tilesState.reduce((flaggedTiles, tile)=>(flaggedTiles + (tile.flagged ? 1 : 0)), 0)
         };
 
-        const handlePreloadAds = () => {
-
-            preloadAds().then((data)=>{
-                data.result && setIsAdsLoaded(true);
-            }).catch((e)=>{
-                console.log({ads: "preloadClip", e})
-            });
-
-            if (size !== "xl") {
-                showBannerAds(userId)
-                    .catch((e)=>{
-                        console.log({ads: "showBanner", e});
-                    });
-            }
-        };
-
-        if (!isAdsLoaded) {
-            handlePreloadAds();
-
-            if (!isActionRegistered)
-                registerGameStart(device, userId, setIsActionRegistered, setIsBanned, setXCode);
-        }
+        // const handlePreloadAds = () => {
+        //
+        //     preloadAds().then((data)=>{
+        //         data.result && setIsAdsLoaded(true);
+        //     }).catch((e)=>{
+        //         console.log({ads: "preloadClip", e})
+        //     });
+        //
+        //     if (size !== "xl") {
+        //         showBannerAds(userId)
+        //             .catch((e)=>{
+        //                 console.log({ads: "showBanner", e});
+        //             });
+        //     }
+        // };
+        //
+        // if (!isAdsLoaded) {
+        //     handlePreloadAds();
+        //
+        //     if (!isActionRegistered)
+        //         registerGameStart(device, userId, setIsActionRegistered, setIsBanned, setXCode);
+        // }
 
         setCountOfFlaggedTiles(calculateCountOfFlaggedTiles());
     }, [tilesState, isAdsLoaded, isActionRegistered]);

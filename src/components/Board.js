@@ -5,9 +5,9 @@ import {generateBombs, generatePrompts} from "../mechanics/board";
 import {pushTile as pushTileMechanic} from "../mechanics/tile";
 import {Popup, Tile} from "./";
 
-import boardStyle from '../styles/boardStyle.css';
 import {registerGameEnd} from "../helpers/commonHelpers";
 import {handleLongPress} from "../helpers/boardHelpers/handleLongPress";
+import boardStyle from '../styles/boardStyle.css';
 
 
 export const Board = ({
@@ -91,12 +91,12 @@ export const Board = ({
 
     useEffect(()=>{
         if ( ["GAME_OVER", "WIN"].includes(gameState) ) {
-            if (gameState === "GAME_OVER") {
-                showAds(user.id)
-                    .catch((e)=>{
-                        console.log({ads: "showClip", e})
-                    });
-            }
+            // if (gameState === "GAME_OVER") {
+            //     showAds(user.id)
+            //         .catch((e)=>{
+            //             console.log({ads: "showClip", e})
+            //         });
+            // }
             registerGameEnd(device, user, gameState === "WIN", userRecord, size, bombsList, clicksList, xCode);
             setClicksList([]);
 
