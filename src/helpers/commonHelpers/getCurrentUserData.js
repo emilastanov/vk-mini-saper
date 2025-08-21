@@ -15,7 +15,7 @@ export const getCurrentUserData = (setCurrentUserData, setUserDevice, setIsBanne
             console.log(e);
         });
         registerCurrentUserClientData(data.id, setUserDevice);
-        showOnBoardingIfItDidNotShow(data.id);
+        // showOnBoardingIfItDidNotShow(data.id);
     }).catch((e)=>{
         setCurrentUserData(false);
         console.log(e);
