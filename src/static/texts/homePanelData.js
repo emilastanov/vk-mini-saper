@@ -9,12 +9,12 @@ export const buttons = [
         mode: 'secondary',
         goTo: 'game'
     }],
-    [{
-        text: 'Доска лидеров',
-        className: 'button yellow',
-        mode: 'secondary',
-        goTo: 'leaderboard'
-    }],
+    // [{
+    //     text: 'Доска лидеров',
+    //     className: 'button yellow',
+    //     mode: 'secondary',
+    //     goTo: 'leaderboard'
+    // }],
     [{
         text: 'Параметры игры',
         className: 'button blue',
